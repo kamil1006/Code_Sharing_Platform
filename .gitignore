@@ -1,0 +1,27 @@
+# Project exclude paths
+/.gradle/
+/Code Sharing Platform/task/build/
+/Code Sharing Platform/task/out/
+/Code Sharing Platform/task/out/production/classes/
+/Topics/Declaring a method/Sum of numbers in the range/out/
+/Topics/Declaring a method/Sum of numbers in the range/out/production/classes/
+/Topics/Declaring a method/Theory/out/
+/Topics/Declaring a method/Theory/out/production/classes/
+/Topics/Declaring a method/Vowel or not/out/
+/Topics/Declaring a method/Vowel or not/out/production/classes/
+/Topics/Iterating over arrays/Check if an array contains two numbers/out/
+/Topics/Iterating over arrays/Check if an array contains two numbers/out/production/classes/
+/Topics/Iterating over arrays/Count how many times a number occurs/out/
+/Topics/Iterating over arrays/Count how many times a number occurs/out/production/classes/
+/Topics/Iterating over arrays/Cyclically shifting elements/out/
+/Topics/Iterating over arrays/Cyclically shifting elements/out/production/classes/
+/Topics/Iterating over arrays/Individual taxes/out/
+/Topics/Iterating over arrays/Individual taxes/out/production/classes/
+/Topics/Iterating over arrays/The maximum product of adjacent elements/out/
+/Topics/Iterating over arrays/The maximum product of adjacent elements/out/production/classes/
+/Topics/Iterating over arrays/The sum of array elements/out/
+/Topics/Iterating over arrays/The sum of array elements/out/production/classes/
+/Topics/Iterating over arrays/Theory/out/
+/Topics/Iterating over arrays/Theory/out/production/classes/
+/Topics/Iterating over arrays/Triples/out/
+/Topics/Iterating over arrays/Triples/out/production/classes/

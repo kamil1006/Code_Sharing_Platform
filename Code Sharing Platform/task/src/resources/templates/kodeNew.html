@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+
+    <style>
+        textarea {
+            width:600px;
+            height:200px;
+            font-size:10pt;
+            }
+
+
+    </style>
+
+</head>
+<body>
+<pre th:text="${powitanie}"></pre>
+<!--
+<form action="#" th:action="@{/code/new}" th:object="${informacyjka}" method="post">
+    <textarea name="textarea" th:field="*{kod}">// write your code here</textarea>
+   <br><br>
+   <button type="submit">Submit</button>
+</form>
+-->
+
+<form action="" method="post" th:object="${informacyjka}">
+    <textarea id="code_snippet" th:field="*{kod}"> //write your code here </textarea>
+    <br><br>
+    Time restriction <input id="time_restriction" type="text" th:field="*{timeRestriction}">
+    <br><br>
+    Views restriction <input id="views_restriction" type="text" th:field="*{viewsRestriction}">
+    <br><br>
+    <button id="send_snippet" type="submit" onclick="send()">Submit</button>
+</form>
+
+<!--
+<form action="" method="post" >
+    <textarea id="code_snippet" > //write your code here </textarea>
+    <br><br>
+    <button id="send_snippet" type="submit" onclick="send()">Submit</button>
+</form>
+-->
+
+
+</body>
+<script>
+function send() {
+    let object = {
+        "code": document.getElementById("code_snippet").value,
+        "time": parseInt(document.getElementById("time_restriction").value),
+          "views": parseInt(document.getElementById("views_restriction").value),
+    };
+
+    let json = JSON.stringify(object);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", '/api/code/new', false)
+    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    xhr.send(json);
+
+    if (xhr.status == 200) {
+      alert("Success!");
+    }
+}
+
+
+</script>
+</html>

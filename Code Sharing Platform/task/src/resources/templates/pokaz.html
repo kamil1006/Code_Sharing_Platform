@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Code</title>
+
+    <style>
+        pre {
+            width:600px;
+            height:200px;
+            font-size:10pt;
+            border-style: double;
+            }
+
+
+    </style>
+
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+<span id="load_date" th:text="${czasWyswietlania}"> ... </span>
+<br>
+
+
+<div th:if="'tt' == ${tt}">
+    <p>czas wyswietlania</p>
+    <span id="time_restriction" th:text="${sekundy}"> pozostalo sekund </span>
+</div>
+<div th:if="'ww' == ${ww}">
+    <p>ilosc odslon</p>
+    <span id="views_restriction" th:text="${odslony}"> pozostalo odslon </span>
+
+
+</div>
+
+
+<pre id="code_snippet"><code  th:text="${informacyjka1}">
+
+<!--
+    <pre id="code_snippet" th:text="${informacyjka1}">  </pre>
+-->
+
+
+
+</code></pre>
+
+</body>
+
+</html>
